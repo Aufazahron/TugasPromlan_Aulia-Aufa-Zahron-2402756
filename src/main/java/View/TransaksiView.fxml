@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="449.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.TransaksiController">
+   <children>
+      <TextField fx:id="nominalInput" layoutX="48.0" layoutY="87.0" promptText="Masukan Nominal" />
+      <TextField fx:id="deskripsiInput" layoutX="324.0" layoutY="87.0" prefHeight="26.0" prefWidth="144.0" promptText="Deskripsi" />
+      <Button layoutX="176.0" layoutY="132.0" mnemonicParsing="false" onAction="#transactionAdd" prefHeight="27.0" prefWidth="76.0" text="Add" />
+      <Button layoutX="263.0" layoutY="132.0" mnemonicParsing="false" onAction="#transactionEdit" prefHeight="27.0" prefWidth="76.0" text="Edit" />
+      <Button layoutX="351.0" layoutY="132.0" mnemonicParsing="false" onAction="#transactionDelete" prefHeight="27.0" prefWidth="76.0" text="Delete" />
+      <TableView fx:id="data" layoutX="47.0" layoutY="177.0" prefHeight="200.0" prefWidth="505.0">
+         <columns>
+            <TableColumn fx:id="colNominal" prefWidth="132.00006103515625" text="Nominal" />
+            <TableColumn fx:id="colDeskripsi" minWidth="5.0" prefWidth="141.60009765625" text="Deskripsi" />
+            <TableColumn fx:id="colJenis" prefWidth="108.79998779296875" text="Jenis" />
+            <TableColumn fx:id="colTanggal" prefWidth="122.4000244140625" text="Tanggal" />
+         </columns>
+      </TableView>
+      <DatePicker fx:id="dateInput" layoutX="478.0" layoutY="86.0" prefHeight="26.0" prefWidth="107.0" />
+      <ComboBox fx:id="dropdown" layoutX="212.0" layoutY="85.0" prefHeight="28.0" prefWidth="98.0" promptText="Jenis" />
+      <Label layoutX="99.0" layoutY="11.0" prefHeight="30.0" prefWidth="66.0" text="Total Uang" />
+      <Label fx:id="totalView" layoutX="67.0" layoutY="38.0" prefHeight="29.0" prefWidth="130.0" textAlignment="CENTER" />
+      <Label layoutX="263.0" layoutY="8.0" prefHeight="30.0" prefWidth="76.0" text="Pemasukan" />
+      <Label fx:id="pemasukanView" layoutX="236.0" layoutY="38.0" prefHeight="36.0" prefWidth="130.0" textAlignment="CENTER" />
+      <Label layoutX="430.0" layoutY="8.0" prefHeight="30.0" prefWidth="76.0" text="Pengeluaran" />
+      <Label fx:id="pengeluaranView" layoutX="402.0" layoutY="38.0" prefHeight="36.0" prefWidth="130.0" textAlignment="CENTER" />
+      <DatePicker fx:id="filterStartInput" layoutX="127.0" layoutY="405.0" prefHeight="26.0" prefWidth="107.0" />
+      <Label layoutX="40.0" layoutY="403.0" prefHeight="30.0" prefWidth="76.0" text="Filter Start :" />
+      <DatePicker fx:id="filterEndInput" layoutX="357.0" layoutY="405.0" prefHeight="26.0" prefWidth="107.0" />
+      <Label layoutX="281.0" layoutY="403.0" prefHeight="30.0" prefWidth="76.0" text="Filter End :" />
+      <Button layoutX="493.0" layoutY="405.0" mnemonicParsing="false" onAction="#clearFilter" prefHeight="27.0" prefWidth="98.0" text="Clear FIlter" />
+   </children>
+</AnchorPane>
